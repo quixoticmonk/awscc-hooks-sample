@@ -1,0 +1,1 @@
+# awscc-hooks-sample
