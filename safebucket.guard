@@ -1,8 +1,5 @@
 # Rule Identifier:
 #    S3_BUCKET_PUBLIC_WRITE_PROHIBITED
-#
-# Select all S3 resources from the incoming template (payload)
-#
 let s3_buckets_public_write_prohibited = Resources.*[ Type == 'AWS::S3::Bucket' ]
 
 rule S3_BUCKET_PUBLIC_WRITE_PROHIBITED when %s3_buckets_public_write_prohibited !empty {
@@ -19,9 +16,6 @@ rule S3_BUCKET_PUBLIC_WRITE_PROHIBITED when %s3_buckets_public_write_prohibited 
 
 # Rule Identifier:
 #    S3_BUCKET_VERSIONING_ENABLED
-#
-# Select all S3 resources from the incoming template (payload)
-#
 let s3_buckets_versioning_enabled = Resources.*[ Type == 'AWS::S3::Bucket' ]
 
 rule S3_BUCKET_VERSIONING_ENABLED when %s3_buckets_versioning_enabled !empty {
